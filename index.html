@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Главная страница - Студент МИРЭА</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles1.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="img/icons8-alzheimer-100.png" alt="Логотип сайта" class="header__logo-image" width="50" height="50">
+                <div class="header__logo-caption">Логотипчик</div>
+            </div>
+            <div class="header__info">
+                <p class="header__group">Группа ЭФБО-03-23</p>
+                <p class="header__my-name">Черников Алексей Михайлович</p>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="navigate">
+            <ul class="navigate__list">
+                <li class="navigate__item"><a href="index.html" class="no-underline">Главная</a></li>
+                <li class="navigate__item"><a href="webapp.html" class="no-underline">Заказать сайт</a></li>
+                <li class="navigate__item"><a href="study.html" class="no-underline">Моя учеба</a></li>
+                <li class="navigate__item"><a href="bootstrap.html" class="no-underline">Бутстрап</a></li>
+            </ul>
+        </nav>
+
+        <!-- Основной контент -->
+        <main>
+            <section class="section">
+                <div class="section__block">
+                    <nav class="section__block-nav">
+                        <div class="section__block-nav-title">
+                            <p><b>Навигация по странице</b></p>
+                        </div>
+                        <ul class="section__block-nav-list">
+                            <li class="section__block-nav-item"><a href="#">Фронтенд</a></li>
+                            <li class="section__block-nav-item"><a href="#">Бэкенд</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="section__block">
+                    <div class="welcome">
+                        <div class="welcome__title">
+                            <h1>Добро Пожаловать на мой сайт!</h1>
+                            <div class="welcome_info">Я студент МИРЭА</div>
+                        </div>
+                        <img src="img/person.jpg" alt="person.jpg" class="welcome__image" height="200" width="200"
+                            loading="lazy">
+                    </div>
+                    <!-- Секция контента -->
+                    <div class="frontend">
+                        <h1 class="frontend__title">Фронтенд</h1>
+                        <p class="frontend__main">
+                            Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя все
+                            визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст.
+                        </p>
+                        <div class="video-container">
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/Cw_Y8uWe5HY"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+
+                    <div class="backend">
+                        <h1 class="backend__title">Бекенд</h1>
+                        <p class="backend__main">
+                            Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку
+                            данных, управление пользователями и взаимодействие с базами данных.
+                        </p>
+                        <div class="video-container">
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/rY7cpJPDTTA"
+                                frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Подвал -->
+        <footer class="footer">
+            <div class="footer__text">
+                <p>© Все права защищены</p>
+            </div>
+            <div class="footer__society">
+                <ul class="footer__society-list">
+                    <li class="footer__society-item">
+                        <a href="https://www.whatsapp.com" target="_blank" aria-label="Whatsapp">
+                            <img src="img/WhatsApp.svg" alt="Whatsapp" width="32" height="32">
+                        </a>
+                    </li>
+                    <li class="footer__society-item">
+                        <a href="https://telegram.org" target="_blank" aria-label="Telegram">
+                            <img src="img/Telegram.svg" alt="Telegram" width="30" height="30">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Кнопка прокрутки вверх -->
+    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Наверх</button>
+
+    <script>
+        // Показ кнопки при прокрутке вниз
+        window.addEventListener('scroll', function () {
+            const scrollToTopBtn = document.querySelector('.scroll-to-top');
+            if (window.scrollY > 300) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>

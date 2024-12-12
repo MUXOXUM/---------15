@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Учеба в ВУЗе</title>
+    <link rel="stylesheet" href="styles/styles1.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+</head>
+
+
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">
+                <img src="img/icons8-alzheimer-100.png" alt="Логотип сайта" class="header__logo-image" width="50" height="50">
+                <div class="header__logo-caption">Логотипчик</div>
+            </div>
+            <div class="header__info">
+                <p class="header__group">Группа ЭФБО-03-23</p>
+                <p class="header__my-name">Черников Алексей Михайлович</p>
+            </div>
+        </header>
+
+        <nav class="navigate">
+            <ul class="navigate__list">
+                <li class="navigate__item"><a href="index.html" class="no-underline">Главная</a></li>
+                <li class="navigate__item"><a href="webapp.html" class="no-underline">Заказать сайт</a></li>
+                <li class="navigate__item"><a href="study.html" class="no-underline">Моя учеба</a></li>
+                <li class="navigate__item"><a href="bootstrap.html" class="no-underline">Бутстрап</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section class="section">
+                <div class="section__block">
+                    <nav class="section__block-nav">
+                        <div class="section__block-nav-title">
+                            <p><b>Навигация по странице</b></p>
+                        </div>
+                        <ul class="section__block-nav-list">
+                            <li class="section__block-nav-item"><a href="#">Фронтенд</a></li>
+                            <li class="section__block-nav-item"><a href="#">Бэкенд</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="section__block">
+                    <!-- Добавление таблиц для лекций и практик -->
+                    <section>
+                        <h2>Лекции</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Тема</th>
+                                    <th>Посещение</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Основы языка HTML</td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Углубленное изучение HTML</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Основы работы с CSS</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Адаптивная верстка. Flexbox и Grid Layout</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Bootstrap — работа с фреймворком</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Основы языка JavaScript</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Работа с DOM и событиями в JavaScript</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Введение в GitHub и GitHub Pages</td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                        <h2>Практики</h2>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>№</th>
+                                    <th>Тема</th>
+                                    <th>Посещение</th>
+                                    <th>Выполнение</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1</td>
+                                    <td>Основы языка HTML</td>
+                                    <td><input type="checkbox" checked></td>
+                                    <td><input type="checkbox" checked></td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>Формы и кнопки в HTML</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>Таблицы и интерактивные элементы HTML</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>Основы работы с CSS</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>Работа с классами в CSS</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>Работа с сетками и разметкой в HTML</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>Адаптивная верстка</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>Bootstrap</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>Основы языка JavaScript</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>Базовые задачи на JS</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>Работа с DOM</td>
+                                    <td><input type="checkbox"></td>
+                                    <td><input type="checkbox"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+
+                    <!-- Интерактивная карта Яндекса -->
+                    <section>
+                        <h2>Карта</h2>
+                        <div id="map" style="width: 100%; height: 400px;"></div>
+                    </section>
+
+                    <!-- Встраивание PDF -->
+                    <section>
+                        <h2>PDF Документ</h2>
+                        <iframe src="documents/sample.pdf" width="100%" height="500px"></iframe>
+                    </section>
+
+        </main>
+
+        <footer class="footer">
+            <div class="footer__text">
+                <p>©Все права защищены</p>
+            </div>
+            <div class="footer__society">
+                <ul class="footer__society-list">
+                    <li class="footer__society-item">
+                        <a href="https://www.whatsapp.com" target="_blank" aria-label="Whatsapp">
+                            <img src="img/WhatsApp.svg" alt="Whatsapp" width="32" height="32">
+                        </a>
+                    </li>
+                    <li class="footer__society-item">
+                        <a href="https://telegram.org" target="_blank" aria-label="Telegram">
+                            <img src="img/Telegram.svg" alt="Telegram" width="30" height="30">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+
+
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init() {
+            // Создаем карту, центрированную на координаты адреса
+            var myMap = new ymaps.Map("map", {
+                center: [55.66985876502471, 37.48046689054042], // Координаты Вернадского, 78
+                zoom: 15
+            });
+
+            // Создаем маркер (Placemark) на заданные координаты
+            var myPlacemark = new ymaps.Placemark([55.66985876502471, 37.48046689054042], {
+                balloonContent: 'Проспект Вернадского, 78'
+            });
+
+            // Добавляем маркер на карту
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+</body>
+
+</html>

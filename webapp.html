@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Заказать сайт</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/styles1.css">
+    <link rel="stylesheet" href="styles/styles2.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Шапка -->
+        <header class="header">
+            <div class="header__logo">
+                <img src="img/icons8-alzheimer-100.png" alt="Логотип сайта" class="header__logo-image" width="50" height="50">
+                <div class="header__logo-caption">Логотипчик</div>
+            </div>
+            <div class="header__info">
+                <p class="header__group">Группа ЭФБО-03-23</p>
+                <p class="header__my-name">Черников Алексей Михайлович</p>
+            </div>
+        </header>
+
+        <!-- Навигация -->
+        <nav class="navigate">
+            <ul class="navigate__list">
+                <li class="navigate__item"><a href="index.html" class="no-underline">Главная</a></li>
+                <li class="navigate__item"><a href="webapp.html" class="no-underline">Заказать сайт</a></li>
+                <li class="navigate__item"><a href="study.html" class="no-underline">Моя учеба</a></li>
+                <li class="navigate__item"><a href="bootstrap.html" class="no-underline">Бутстрап</a></li>
+            </ul>
+        </nav>
+        
+        <!-- Основной контент -->
+        <main>
+            <section class="section">
+                <div class="section__block">
+                    <nav class="section__block-nav">
+                        <div class="section__block-nav-title">
+                            <p><b>Навигация по странице</b></p>
+                        </div>
+                        <ul class="section__block-nav-list">
+                            <li class="section__block-nav-item"><a href="#">Фронтенд</a></li>
+                            <li class="section__block-nav-item"><a href="#">Бэкенд</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
+                <div class="section__block welcome">
+                    <h1 class="welcome__title">Разработка сайтов на заказ</h1>
+                    <ul class="welcome__list">
+                        <li class="welcome__item">
+                            <button onclick="openModal('Сайт-визитка')" class="product-card">
+                                <img src="img/des.jpg" alt="Сайт-визитка" class="welcome__image" height="250"
+                                    loading="lazy">
+                                <div class="welcome__image-description">
+                                    <p>Сайт-визитка</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="welcome__item">
+                            <button onclick="openModal('Корпоративный сайт')" class="product-card">
+                                <img src="img/fontan.jpg" alt="Корпоративный сайт" class="welcome__image" height="250"
+                                    loading="lazy">
+                                <div class="welcome__image-description">
+                                    <p>Корпоративный сайт</p>
+                                </div>
+                            </button>
+                        </li>
+                        <li class="welcome__item">
+                            <button onclick="openModal('Интернет магазин')" class="product-card">
+                                <img src="img/cat.jpg" alt="Интернет магазин" class="welcome__image" height="250"
+                                    loading="lazy">
+                                <div class="welcome__image-description">
+                                    <p>Интернет магазин</p>
+                                </div>
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="welcome__text">
+                        <p>Веб-разработка — это процесс создания и поддержания веб-сайтов и веб-приложений, который
+                            охватывает широкий спектр технологий и инструментов. Основная цель веб-разработки — создание
+                            удобного,
+                            функционального и эстетически привлекательного ресурса, который может быть использован в
+                            интернете. Основные этапы веб-разработки: Проектирование. На этом этапе разрабатывается
+                            концепция сайта,
+                            создаются макеты страниц и продумывается их функционал. Важно учесть цели сайта, аудиторию и
+                            требования заказчика. Верстка. Используя HTML (язык разметки гипертекста), CSS (каскадные
+                            таблицы стилей)
+                            и JavaScript, разработчики превращают макеты в работающие веб-страницы. HTML описывает
+                            структуру сайта, CSS отвечает за внешний вид, а JavaScript — за интерактивные элементы.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__text">
+                <p>© Все права защищены</p>
+            </div>
+            <div class="footer__society">
+                <ul class="footer__society-list">
+                    <li class="footer__society-item">
+                        <a href="https://www.whatsapp.com" target="_blank" aria-label="WhatsApp">
+                            <img src="img/WhatsApp.svg" alt="WhatsApp" width="32" height="32">
+                        </a>
+                    </li>
+                    <li class="footer__society-item">
+                        <a href="https://telegram.org" target="_blank" aria-label="Telegram">
+                            <img src="img/Telegram.svg" alt="Telegram" width="30" height="30">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Модальное окно -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" aria-label="Закрыть">&times;</span>
+            <h2 id="modal-title">Форма обратной связи</h2>
+            <form id="feedbackForm">
+                <div class="form-group">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" placeholder="Иван Иванов Иванович" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Электронная почта:</label>
+                    <input type="email" id="email" placeholder="ivan@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="phone">Телефон:</label>
+                    <input type="text" id="phone" placeholder="+7 (___) ___-__-__" required>
+                </div>
+                <div class="form-group">
+                    <label for="country">Страна:</label>
+                    <select id="country" required>
+                        <option value="ru">Россия</option>
+                        <option value="us">США</option>
+                        <option value="de">Германия</option>
+                        <option value="fr">Франция</option>
+                        <option value="uk">Великобритания</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="date">Дата:</label>
+                    <input type="date" id="date" required>
+                </div>
+                <div class="form-group">
+                    <label for="comments">Комментарии:</label>
+                    <textarea id="comments" placeholder="Ваши комментарии (необязательно)"></textarea>
+                </div>
+                <div class="form-group-inline">
+                    <input type="checkbox" id="consent" required>
+                    <label for="consent">Согласен на обработку персональных данных</label>
+                </div>
+                <input type="hidden" id="serviceType" name="serviceType">
+                <button type="submit">Отправить</button>
+                <div id="successMessage" class="hidden">Форма успешно отправлена!</div>
+            </form>
+        </div>
+    </div>
+
+    <script src="scripts/script1.js"></script>
+</body>
+
+</html>
