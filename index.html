@@ -7,33 +7,48 @@
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>Главная страница - Студент МИРЭА</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles/styles1.css">
+    <link rel="stylesheet" href="styles/styles_main.css">
 </head>
 
 <body>
+    <!-- Шапка -->
+    <header class="header py-3">
+        <div class="container d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="img/icons8-alzheimer-100.png" alt="Логотип сайта" width="50" height="50" class="mr-3">
+                <h2 class="h5 mb-0">Логотипчик</h2>
+            </div>
+            <div class="text-right">
+                <p class="mb-0">Группа ЭФБО-03-23</p>
+                <p class="mb-0">Черников Алексей Михайлович</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Навигация -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4a7b61;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <!-- Увеличенные адаптивные отступы -->
+                <ul class="navbar-nav d-flex justify-content-between w-100 ml-lg-6 mr-lg-6 ml-md-5 mr-md-5 ml-3 mr-3">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                    <li class="nav-item"><a class="nav-link" href="webapp.html">Заказать сайт</a></li>
+                    <li class="nav-item"><a class="nav-link" href="study.html">Моя учеба</a></li>
+                    <li class="nav-item"><a class="nav-link" href="testfile.html">Авторизация</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <div class="container">
-        <!-- Шапка -->
-        <header class="header">
-            <div class="header__logo">
-                <img src="img/icons8-alzheimer-100.png" alt="Логотип сайта" class="header__logo-image" width="50" height="50">
-                <div class="header__logo-caption">Логотипчик</div>
-            </div>
-            <div class="header__info">
-                <p class="header__group">Группа ЭФБО-03-23</p>
-                <p class="header__my-name">Черников Алексей Михайлович</p>
-            </div>
-        </header>
-
-        <!-- Навигация -->
-        <nav class="navigate">
-            <ul class="navigate__list">
-                <li class="navigate__item"><a href="index.html" class="no-underline">Главная</a></li>
-                <li class="navigate__item"><a href="webapp.html" class="no-underline">Заказать сайт</a></li>
-                <li class="navigate__item"><a href="study.html" class="no-underline">Моя учеба</a></li>
-                <li class="navigate__item"><a href="bootstrap.html" class="no-underline">Бутстрап</a></li>
-            </ul>
-        </nav>
-
         <!-- Основной контент -->
         <main>
             <section class="section">
@@ -52,7 +67,7 @@
                 <div class="section__block">
                     <div class="welcome">
                         <div class="welcome__title">
-                            <h1>Добро Пожаловать на мой сайт!</h1>
+                            <h2>Добро Пожаловать на мой сайт!</h2>
                             <div class="welcome_info">Я студент МИРЭА</div>
                         </div>
                         <img src="img/person.jpg" alt="person.jpg" class="welcome__image" height="200" width="200"
@@ -60,7 +75,7 @@
                     </div>
                     <!-- Секция контента -->
                     <div class="frontend">
-                        <h1 class="frontend__title">Фронтенд</h1>
+                        <h2 class="frontend__title">Фронтенд</h2>
                         <p class="frontend__main">
                             Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя все
                             визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст.
@@ -74,7 +89,7 @@
                     </div>
 
                     <div class="backend">
-                        <h1 class="backend__title">Бекенд</h1>
+                        <h2 class="backend__title">Бекенд</h2>
                         <p class="backend__main">
                             Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку
                             данных, управление пользователями и взаимодействие с базами данных.
@@ -89,43 +104,25 @@
                 </div>
             </section>
         </main>
-
-        <!-- Подвал -->
-        <footer class="footer">
-            <div class="footer__text">
-                <p>© Все права защищены</p>
-            </div>
-            <div class="footer__society">
-                <ul class="footer__society-list">
-                    <li class="footer__society-item">
-                        <a href="https://www.whatsapp.com" target="_blank" aria-label="Whatsapp">
-                            <img src="img/WhatsApp.svg" alt="Whatsapp" width="32" height="32">
-                        </a>
-                    </li>
-                    <li class="footer__society-item">
-                        <a href="https://telegram.org" target="_blank" aria-label="Telegram">
-                            <img src="img/Telegram.svg" alt="Telegram" width="30" height="30">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </footer>
     </div>
 
-    <!-- Кнопка прокрутки вверх -->
-    <button class="scroll-to-top" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Наверх</button>
+    <!-- Подвал -->
+    <footer class="footer py-3 mt-4">
+        <div class="container text-center d-flex justify-content-center align-items-center">
+            <p class="mb-0 mr-3">Все права защищены &copy; 2024</p>
+            <div class="d-flex">
+                <a href="https://t.me/" target="_blank" class="mx-2">
+                    <img src="https://img.icons8.com/color/48/000000/telegram-app.png" alt="Telegram" width="40"
+                        height="40">
+                </a>
+                <a href="https://wa.me/" target="_blank" class="mx-2">
+                    <img src="https://img.icons8.com/color/48/000000/whatsapp.png" alt="WhatsApp" width="40"
+                        height="40">
+                </a>
+            </div>
+        </div>
+    </footer>
 
-    <script>
-        // Показ кнопки при прокрутке вниз
-        window.addEventListener('scroll', function () {
-            const scrollToTopBtn = document.querySelector('.scroll-to-top');
-            if (window.scrollY > 300) {
-                scrollToTopBtn.style.display = 'block';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-    </script>
 </body>
 
 </html>

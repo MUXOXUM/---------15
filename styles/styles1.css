@@ -1,332 +1,202 @@
-        /**
- * Нормализация блочной модели
- */
-        *,
-        ::before,
-        ::after {
-            box-sizing: border-box;
-        }
+ /* Убираем внутренние отступы для списков с классами */
+ :where(ul, ol):where([class]) {
+     padding-left: 0;
+ }
 
-        /* Убираем внутренние отступы для списков с классами */
-        :where(ul, ol):where([class]) {
-            padding-left: 0;
-        }
+ /* Убираем внешние отступы для body и элементов с классами */
+ body,
+ :where(blockquote, figure):where([class]) {
+     margin: 0;
+ }
 
-        /* Убираем внешние отступы для body и элементов с классами */
-        body,
-        :where(blockquote, figure):where([class]) {
-            margin: 0;
-        }
+ /* Обнуляем отступы для dd и fieldset с классами */
+ :where(dd[class]),
+ :where(fieldset[class]) {
+     margin-left: 0;
+     padding: 0;
+     border: none;
+ }
 
+ /* Убираем стандартный маркер для маркированного списка с классом */
+ :where(ul[class]) {
+     list-style: none;
+ }
 
+ /* Удаляем стили для address с классом */
+ :where(address[class]) {
+     font-style: normal;
+ }
 
-        /* Обнуляем отступы для dd и fieldset с классами */
-        :where(dd[class]),
-        :where(fieldset[class]) {
-            margin-left: 0;
-            padding: 0;
-            border: none;
-        }
+ /* Обнуляем внешние отступы для параграфа и задаем локальную переменную */
+ p {
+     --paragraphMarginBottom: 24px;
+     margin-block: 0;
+ }
 
-        /* Убираем стандартный маркер для маркированного списка с классом */
-        :where(ul[class]) {
-            list-style: none;
-        }
+ /* Внешний отступ вниз для параграфа без класса, не последнего среди соседей */
+ p:where(:not([class]):not(:last-child)) {
+     margin-bottom: var(--paragraphMarginBottom);
+ }
 
-        /* Удаляем стили для address с классом */
-        :where(address[class]) {
-            font-style: normal;
-        }
+ /* Упрощаем работу с изображениями */
+ img {
+     display: block;
+     max-width: 100%;
+ }
 
-        /* Обнуляем внешние отступы для параграфа и задаем локальную переменную */
-        p {
-            --paragraphMarginBottom: 24px;
-            margin-block: 0;
-        }
+ /* Наследуем свойства шрифта для полей ввода */
+ input,
+ textarea,
+ select,
+ button {
+     font: inherit;
+ }
 
-        /* Внешний отступ вниз для параграфа без класса, не последнего среди соседей */
-        p:where(:not([class]):not(:last-child)) {
-            margin-bottom: var(--paragraphMarginBottom);
-        }
+ /* Основные стили для html и body */
+ html {
+     height: 100%;
+     /* Для фиксированной высоты */
+ }
 
-        /* Упрощаем работу с изображениями */
-        img {
-            display: block;
-            max-width: 100%;
-        }
+ body {
+     min-height: 100%;
+     /* Для фиксированной высоты */
+     line-height: 1.5;
+     /* Унифицированный интерлиньяж */
+ }
 
-        /* Наследуем свойства шрифта для полей ввода */
-        input,
-        textarea,
-        select,
-        button {
-            font: inherit;
-        }
+ /* Плавный скролл */
+ html,
+ :has(:target) {
+     scroll-behavior: smooth;
+ }
 
-        /* Основные стили для html и body */
-        html {
-            height: 100%;
-            /* Для фиксированной высоты */
-        }
+ /* Приведение цвета svg-элементов к единому */
+ svg *[fill],
+ svg *[stroke] {
+     fill: currentColor;
+     stroke: currentColor;
+ }
 
-        body {
-            min-height: 100%;
-            /* Для фиксированной высоты */
-            line-height: 1.5;
-            /* Унифицированный интерлиньяж */
-        }
+ /* Переходы для svg-элементов */
+ svg * {
+     transition-property: fill, stroke;
+ }
 
-        /* Плавный скролл */
-        html,
-        :has(:target) {
-            scroll-behavior: smooth;
-        }
+ /* Базовые стили */
+ * {
+     box-sizing: border-box;
+ }
 
-        /* Приведение цвета svg-элементов к единому */
-        svg *[fill],
-        svg *[stroke] {
-            fill: currentColor;
-            stroke: currentColor;
-        }
+ body {
+     font-family: 'Roboto', sans-serif;
+     background-color: #f0f8f5;
+     color: #333;
+     line-height: 1.6;
+     margin: 0;
+ }
 
-        /* Переходы для svg-элементов */
-        svg * {
-            transition-property: fill, stroke;
-        }
+ /* Навигация */
+ .navigate {
+     margin: 15px 0;
+     padding: 10px;
+     background-color: #4a7b61;
+     border-radius: 5px;
+ }
 
-        /* Удаляем анимации и переходы для людей, предпочитающих их не использовать */
-        @media (prefers-reduced-motion: reduce) {
-            * {
-                animation-duration: 0.01ms !important;
-                animation-iteration-count: 1 !important;
-                transition-duration: 0.01ms !important;
-                scroll-behavior: auto !important;
-            }
-        }
+ .navigate__list {
+     display: flex;
+     justify-content: space-evenly;
+     gap: 15px;
+     list-style: none;
+     padding: 0;
+ }
 
-        /* Базовые стили */
-        * {
-            box-sizing: border-box;
-        }
+ .navigate__item a {
+     padding: 10px 30px;
+     background-color: white;
+     border: 1px solid #2f6f4e;
+     color: #2f6f4e;
+     border-radius: 35px;
+     text-decoration: none;
+     font-weight: 500;
+     transition: 0.5s;
+ }
 
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #f0f8f5;
-            color: #333;
-            line-height: 1.6;
-            margin: 0;
-        }
+ .navigate__item a:hover {
+     background-color: #2f6f4e;
+     color: white;
+     border: 1px solid white;
+ }
 
-        /* Контейнер */
-        .container {
-            max-width: 1300px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+ /* Секция основного контента */
+ .section {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+}
 
-        /* Шапка */
-        .header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 15px;
-            background-color: #2f6f4e;
-            color: white;
-            border-radius: 5px;
-        }
+ .section__block {
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    /*border-radius: 5px;*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        /* Навигация */
-        .navigate {
-            margin: 15px 0;
-            padding: 10px;
-            background-color: #4a7b61;
-            border-radius: 5px;
-        }
+ /* Адаптивное видео */
+ .video-container {
+     position: relative;
+     width: 100%;
+     padding-bottom: 56.25%;
+     /* Соотношение сторон 16:9 */
+     height: 0;
+     overflow: hidden;
+ }
 
-        .navigate__list {
-            display: flex;
-            justify-content: space-evenly;
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-        }
+ .video-container iframe {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     border: none;
+ }
 
-        .navigate__item a {
-            padding: 10px 30px;
-            background-color: white;
-            border: 1px solid #2f6f4e;
-            color: #2f6f4e;
-            border-radius: 35px;
-            text-decoration: none;
-            font-weight: 500;
-            transition: 0.5s;
-        }
+ /* Мобильные стили */
+ @media (max-width: 800px) {
+     .header {
+         flex-direction: column;
+     }
 
-        .navigate__item a:hover {
-            background-color: #2f6f4e;
-            color: white;
-            border: 1px solid white;
-        }
+     .navigate {
+         display: flex;
+         flex-direction: column;
+         align-items: center;
+     }
 
-        /* Подвал */
-        .footer {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #2f6f4e;
-            color: white;
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: center;
-        }
+     .navigate__list {
+         flex-direction: column;
+         gap: 20px;
+     }
 
-        .footer__text {
-            justify-self: start;
-        }
+     .section {
+         display: flex;
+         flex-direction: column;
+     }
 
-        .footer__society-list {
-            list-style: none;
-            display: flex;
-            gap: 10px;
-        }
+     .scroll-to-top {
+         display: block;
+     }
 
-        .footer__society-item img {
-            filter: invert(100%);
-            transition: transform 0.3s ease;
-        }
+     .section__block-nav {
+         text-align: center;
+     }
+ }
 
-        .footer__society-item img:hover {
-            transform: scale(1.1);
-        }
-
-        /* Секция основного контента */
-        .section {
-            display: grid;
-            grid-template-columns: 1fr 4fr;
-            gap: 20px;
-        }
-
-        .section__block {
-            background-color: white;
-            border: 1px solid #ddd;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        /* Адаптивное видео */
-        .video-container {
-            position: relative;
-            width: 100%;
-            padding-bottom: 56.25%;
-            /* Соотношение сторон 16:9 */
-            height: 0;
-            overflow: hidden;
-        }
-
-        .video-container iframe {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: none;
-        }
-
-        /* Кнопка прокрутки вверх */
-        .scroll-to-top {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #4a7b61;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 10px;
-            cursor: pointer;
-            font-size: 16px;
-        }
-
-        /* Мобильные стили */
-        @media (max-width: 800px) {
-            .header {
-                flex-direction: column;
-            }
-
-            .navigate {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            }
-
-            .navigate__list {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .section {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .scroll-to-top {
-                display: block;
-            }
-
-            .section__block-nav {
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .header {
-                text-align: center;
-            }
-        }
-
-
-
-
-
-        .modal {
-            display: none; /* Окно скрыто по умолчанию */
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-        .video-modal-content {
-            background-color: #fefefe;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width: 700px;
-            border-radius: 5px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            text-align: center;
-            position: relative;
-        }
-        
-        .close-video {
-            position: absolute;
-            top: 10px;
-            right: 15px;
-            color: #aaa;
-            font-size: 28px;
-            font-weight: bold;
-            cursor: pointer;
-        }
-        
-        .close-video:hover,
-        .close-video:focus {
-            color: black;
-            text-decoration: none;
-        }
-        
+ @media (max-width: 768px) {
+     .header {
+         text-align: center;
+     }
+ }
