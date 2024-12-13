@@ -1,0 +1,99 @@
+@media (max-width: 768px) {
+
+    .header,
+    .footer {
+        text-align: center;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+    }
+}
+
+body {
+    background-color: #f0f8f5;
+    color: #333;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header,
+.footer {
+    background-color: #2f6f4e;
+    color: white;
+}
+
+.navbar-nav .nav-link {
+    color: white !important;
+    transition: color 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #a9dfbf !important;
+}
+
+.accordion-button {
+    background-color: #4a7b61;
+    color: white;
+}
+
+.carousel-item img {
+    max-height: 600px;
+    object-fit: cover;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.fullscreen-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1050;
+}
+
+.fullscreen-overlay img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f7f7f7;
+    cursor: pointer;
+}
+
+table th:nth-child(1),
+table td:nth-child(1) {
+    width: 3%;
+    /* Для первого столбца */
+}
+
+table th:nth-child(2),
+table td:nth-child(2) {
+    width: 50%;
+    /* Для второго столбца */
+}
+
+.nav-link {
+    font-size: 1.3rem;
+    /* Увеличьте значение, например, 1.25rem = 20px */
+}
+
+#map {
+    /* Оформление карты */
+    width: 100%;
+    height: 600px;
+}
+
+.section__block {
+    margin: 20px auto;
+    background-color: white;
+    border: 1px solid #ddd;
+    padding: 20px;
+    /*border-radius: 5px;*/
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
