@@ -11,7 +11,31 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="styles/styles1.css">
+    <link rel="stylesheet" href="styles/styles_move_image.css">
     <link rel="stylesheet" href="styles/styles_main.css">
+    <style>
+        .image-container {
+            width: 300px;
+            /* Размер контейнера */
+            height: 300px;
+            perspective: 1000px;
+            /* Перспектива для 3D эффекта */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .welcome__image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.1s;
+            /* Плавный переход */
+            transform-style: preserve-3d;
+            /* Для 3D эффекта */
+        }
+    </style>
 </head>
 
 <body>
@@ -69,39 +93,40 @@
                         <div class="welcome__title">
                             <h2>Добро Пожаловать на мой сайт!</h2>
                             <div class="welcome_info">Я студент МИРЭА</div>
-                        </div>
-                        <img src="img/person.jpg" alt="person.jpg" class="welcome__image" height="200" width="200"
-                            loading="lazy">
-                    </div>
-                    <!-- Секция контента -->
-                    <div class="frontend">
-                        <h2 class="frontend__title">Фронтенд</h2>
-                        <p class="frontend__main">
-                            Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя все
-                            визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст.
-                        </p>
-                        <div class="video-container">
-                            <iframe width="640" height="360" src="https://www.youtube.com/embed/Cw_Y8uWe5HY"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
-                        </div>
-                    </div>
+                            <div class="image-container">
+                                <img src="img/person.jpg" alt="person.jpg" class="image" loading="lazy">
+                            </div>
+                            <!-- Секция контента -->
+                            <div class="frontend">
+                                <h2>Фронтенд</h2>
+                                <p class="frontend__main">
+                                    Фронтенд (или клиентская часть) — это то, что видит пользователь. Он включает в себя
+                                    все
+                                    визуальные элементы веб-сайта или приложения: кнопки, формы, изображения и текст.
+                                </p>
+                                <div class="video-container">
+                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/Cw_Y8uWe5HY"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
 
-                    <div class="backend">
-                        <h2 class="backend__title">Бекенд</h2>
-                        <p class="backend__main">
-                            Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за обработку
-                            данных, управление пользователями и взаимодействие с базами данных.
-                        </p>
-                        <div class="video-container">
-                            <iframe width="640" height="360" src="https://www.youtube.com/embed/rY7cpJPDTTA"
-                                frameborder="0"
-                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                allowfullscreen></iframe>
+                            <div class="backend">
+                                <h2>Бекенд</h2>
+                                <p class="backend__main">
+                                    Бэкенд (или серверная часть) — это "за кулисами" веб-приложения. Он отвечает за
+                                    обработку
+                                    данных, управление пользователями и взаимодействие с базами данных.
+                                </p>
+                                <div class="video-container">
+                                    <iframe width="640" height="360" src="https://www.youtube.com/embed/rY7cpJPDTTA"
+                                        frameborder="0"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
             </section>
         </main>
     </div>
@@ -122,6 +147,9 @@
             </div>
         </div>
     </footer>
+
+    <script src="scripts/script_move_image.js"></script>
+    <script src="scripts/script_fav_man.js"></script>
 
 </body>
 
